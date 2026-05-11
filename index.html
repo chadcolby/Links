@@ -1,45 +1,237 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Universal Link Test</title>
-      <style>
-          body {
-              font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              min-height: 100vh;
-              margin: 0;
-              background: #f5f5f5;
-          }
-          .card {
-              background: white;
-              border-radius: 12px;
-              padding: 40px;
-              box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-              text-align: center;
-          }
-          .btn {
-              display: inline-block;
-              padding: 14px 32px;
-              background: #007AFF;
-              color: white;
-              text-decoration: none;
-              border-radius: 8px;
-              font-size: 16px;
-              font-weight: 500;
-          }
-          .btn:active {
-              background: #005ecb;
-          }
-      </style>
-  </head>
-  <body>
-      <div class="card">
-          <p>Link Test</p>
-          <a class="btn" href="https://staging-app.1life.com/pharmacy/choose">Open Link</a>
-      </div>
-  </body>
-  </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Pharmacy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Amazon Ember', Arial, sans-serif;
+            color: #0F1111;
+        }
+
+        .nav {
+            background: #232F3E;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .nav-logo {
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .nav-links {
+            display: flex;
+            gap: 16px;
+        }
+        .nav-links a {
+            color: #DDD;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .banner {
+            background: #232F3E;
+            text-align: center;
+            padding: 10px 20px;
+            border-top: 1px solid #3a4553;
+        }
+        .banner p {
+            color: #F8D775;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f7f7f7 50%, #2ECFB0 50%);
+            padding: 60px 20px;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+        }
+        .hero-content {
+            max-width: 500px;
+        }
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+        .hero-btn {
+            display: inline-block;
+            background: #F5A623;
+            color: #0F1111;
+            padding: 12px 24px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+        .hero-btn:active {
+            background: #e0951a;
+        }
+        .hero-link {
+            display: block;
+            color: #007185;
+            font-size: 14px;
+            text-decoration: none;
+            margin-top: 12px;
+        }
+
+        .benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 24px 20px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            justify-content: center;
+        }
+        .benefit {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        .benefit-check {
+            width: 20px;
+            height: 20px;
+            background: #067D62;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .section h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .section p {
+            color: #565959;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .cta-section {
+            background: #F7F7F7;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: #007185;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .cta-btn:active {
+            background: #005F6B;
+        }
+
+        .cards {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 24px;
+            width: 280px;
+            text-align: center;
+        }
+        .card h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .card p {
+            font-size: 13px;
+            color: #565959;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-logo">amazon pharmacy</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">How it works</a>
+            <a href="#">Help</a>
+        </div>
+    </nav>
+
+    <div class="banner">
+        <p>Need treatment? Get connected to a One Medical provider for $0 with Prime</p>
+    </div>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Save time, save money, stay healthy.</h1>
+            <a class="hero-btn" href="#">Sign up | Sign in</a>
+            <a class="hero-link" href="#">Check if we accept your insurance ›</a>
+        </div>
+    </div>
+
+    <div class="benefits">
+        <div class="benefit">
+            <div class="benefit-check">✓</div>
+            <span>Low prices, with or without insurance</span>
+        </div>
+        <div class="benefit">
+            <div class="benefit-check">✓</div>
+            <span>Automatic refills, delivered to your door</span>
+        </div>
+        <div class="benefit">
+            <div class="benefit-check">✓</div>
+            <span>Pharmacists on call 24/7</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>More ways to spend less</h2>
+        <p>From coupons to Prime member savings, we work hard to find you low prices.</p>
+        <div class="cards">
+            <div class="card">
+                <h3>Prime savings</h3>
+                <p>Save up to 80%* with exclusive discounts for Prime members.</p>
+            </div>
+            <div class="card">
+                <h3>RxPass</h3>
+                <p>Get as many eligible meds as you take for one $5-a-month subscription.</p>
+            </div>
+            <div class="card">
+                <h3>Coupons</h3>
+                <p>We automatically apply eligible manufacturer coupons at checkout.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>Return to One Medical</h2>
+        <a class="cta-btn" href="https://staging-app.1life.com/pharmacy/prescription-details?provider_id=123&date=2026-05-05">Back to Prescription Details</a>
+    </div>
+</body>
+</html>
